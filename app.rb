@@ -5,7 +5,18 @@ require 'shotgun'
 
 class Battle < Sinatra::Base
   get '/' do
-    'Testing infrastructure working!'
+    erb(:index)
+  end
+  
+  get '/test' do
+    'Hello World!'
+  end
+  
+  post '/names' do
+    @name1 = params[:name1]
+    @name2 = params[:name2]
+    p params
+    erb(:play)
   end
 
   run if app_file == $0
