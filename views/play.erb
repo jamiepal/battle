@@ -1,1 +1,6 @@
-<h1> <%= @name1 %> vs <%= @name2 %> </h1>
+<h1> <%= @name1.name %> vs <%= @name2.name %> </h1>
+<%= @name1.name %> HP: <%= @name1.hit_points %>
+<%= @name2.name %> HP: <%= @name2.hit_points %>
+<form action="/attack">
+  <input type="submit" value="Attack">
+</form>
